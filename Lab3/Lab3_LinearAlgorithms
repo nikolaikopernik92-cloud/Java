@@ -1,0 +1,89 @@
+Lab3_LinearAlgorithms
+ └─ src
+    ├─ Task1_SumThreeNumbers.java
+    ├─ Task2_ArithmeticOperations.java
+    ├─ Task3_AssignmentOperator.java
+    ├─ Task4_SquareNumber.java
+    ├─ Task5_Rectangle.java
+
+public class Task1_SumThreeNumbers {
+    public static void main(String[] args) {
+
+        int a = 5;
+        int b = 10;
+        int c = 15;
+
+        int sum = a + b + c;
+
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+        System.out.println("c = " + c);
+        System.out.println("Сумма чисел: " + sum);
+    }
+}
+                                                                                                                                                                                           public class Task2_ArithmeticOperations {
+    public static void main(String[] args) {
+
+        double x = 12;
+        double y = 4;
+
+        double sum = x + y;
+        double multiply = x * y;
+        double divide = x / y;
+
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
+        System.out.println("Сложение: " + sum);
+        System.out.println("Умножение: " + multiply);
+        System.out.println("Деление: " + divide);
+    }
+}
+
+public class Task3_AssignmentOperator {
+    public static void main(String[] args) {
+
+        int a = 10;
+        System.out.println("Начальное значение a: " + a);
+
+        a = a + 5;
+        System.out.println("После присваивания a = a + 5: " + a);
+
+        a = a * 2;
+        System.out.println("После присваивания a = a * 2: " + a);
+    }
+}
+import java.util.Scanner;
+
+public class Task4_SquareNumber {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите целое число: ");
+        int number = scanner.nextInt();
+
+        int square = number * number;
+
+        System.out.println("Квадрат числа: " + square);
+    }
+}
+import java.util.Scanner;
+
+public class Task5_Rectangle {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите длину прямоугольника: ");
+        double a = scanner.nextDouble();
+
+        System.out.print("Введите ширину прямоугольника: ");
+        double b = scanner.nextDouble();
+
+        double area = a * b;
+        double perimeter = 2 * (a + b);
+
+        System.out.println("Площадь прямоугольника: " + area);
+        System.out.println("Периметр прямоугольника: " + perimeter);
+    }
+}
