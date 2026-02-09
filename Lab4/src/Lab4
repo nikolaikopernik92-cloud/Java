@@ -1,0 +1,104 @@
+import java.util.Scanner;
+
+public class Lab4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Выберите задание (1-10):");
+        int choice = sc.nextInt();
+
+        switch (choice) {
+
+            case 1 -> {
+                int n = sc.nextInt();
+                if (n > 0) System.out.println("Число положительное");
+                else if (n < 0) System.out.println("Число отрицательное");
+                else System.out.println("Число равно нулю");
+            }
+
+            case 2 -> {
+                int score = sc.nextInt();
+                if (score >= 90) System.out.println("Оценка: 5");
+                else if (score >= 70) System.out.println("Оценка: 4");
+                else if (score >= 50) System.out.println("Оценка: 3");
+                else System.out.println("Оценка: 2");
+            }
+
+            case 3 -> {
+                int a = sc.nextInt();
+                int b = sc.nextInt();
+                if (a > b) System.out.println("Первое число больше");
+                else if (a < b) System.out.println("Второе число больше");
+                else System.out.println("Числа равны");
+            }
+
+            case 4 -> {
+                int day = sc.nextInt();
+                switch (day) {
+                    case 1 -> System.out.println("Понедельник");
+                    case 2 -> System.out.println("Вторник");
+                    case 3 -> System.out.println("Среда");
+                    case 4 -> System.out.println("Четверг");
+                    case 5 -> System.out.println("Пятница");
+                    case 6 -> System.out.println("Суббота");
+                    case 7 -> System.out.println("Воскресенье");
+                    default -> System.out.println("Неверный номер дня");
+                }
+            }
+
+            case 5 -> {
+                int n = sc.nextInt();
+                if (n % 2 == 0) System.out.println("Чётное число");
+                else System.out.println("Нечётное число");
+            }
+
+            case 6 -> {
+                int age = sc.nextInt();
+                if (age >= 18) System.out.println("Доступ разрешён");
+                else System.out.println("Доступ запрещён");
+            }
+
+            case 7 -> {
+                int month = sc.nextInt();
+                switch (month) {
+                    case 1, 3, 5, 7, 8, 10, 12 -> System.out.println("31 день");
+                    case 4, 6, 9, 11 -> System.out.println("30 дней");
+                    case 2 -> System.out.println("28 дней");
+                    default -> System.out.println("Неверный месяц");
+                }
+            }
+
+            case 8 -> {
+                int t = sc.nextInt();
+                if (t < 0) System.out.println("Холодно");
+                else if (t <= 25) System.out.println("Тепло");
+                else System.out.println("Жарко");
+            }
+
+            case 9 -> {
+                int n = sc.nextInt();
+                if (n >= 10 && n <= 50) System.out.println("Число в диапазоне");
+                else System.out.println("Число вне диапазона");
+            }
+
+            case 10 -> {
+                double a = sc.nextDouble();
+                double b = sc.nextDouble();
+                char op = sc.next().charAt(0);
+
+                switch (op) {
+                    case '+' -> System.out.println(a + b);
+                    case '-' -> System.out.println(a - b);
+                    case '*' -> System.out.println(a * b);
+                    case '/' -> {
+                        if (b != 0) System.out.println(a / b);
+                        else System.out.println("Деление на ноль");
+                    }
+                    default -> System.out.println("Неизвестная операция");
+                }
+            }
+
+            default -> System.out.println("Нет такого задания");
+        }
+    }
+}
